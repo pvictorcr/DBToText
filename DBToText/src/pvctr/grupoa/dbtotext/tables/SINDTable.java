@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class SINDTable extends GenericTable {
 
-	private final String tableName = "SIND";
+	private final String tableName = "SIN";
 	
 	public SINDTable(Connector con) {
 		
@@ -27,11 +27,11 @@ public class SINDTable extends GenericTable {
 				
 				dbl.getFields().add(new StringField(1, " ")); //NAO MEXER
 				dbl.getFields().add(new NumberField(5, rs.getInt("CODIGO")));
-				dbl.getFields().add(new NumberField(50, rs.getInt("NOME")));
+				dbl.getFields().add(new StringField(50, rs.getString("NOME")));
 				dbl.getFields().add(new StringField(10, "01/01/1900"));
-				dbl.getFields().add(new StringField(1, "0"));
-				dbl.getFields().add(new StringField(11, rs.getString("CTPSNUMERO")+Utilities.treatCtpsdv(rs.getString("CTPSDV"))));
-				dbl.getFields().add(new StringField(5, rs.getString("CTPSSERIE")));
+				dbl.getFields().add(new StringField(20, "0"));
+				dbl.getFields().add(new StringField(2, "1"));
+				dbl.getFields().add(new NumberField(18, Utilities.treatCNPJ(rs.getString("CNPJ"))));
 				dbl.getFields().add(new StringField(2, rs.getString("UFD_SIGLA_CTPS")));
 				dbl.getFields().add(new DateField(10, rs.getTimestamp("CTPSDTEXPEDICAO")));				
 				dbl.getFields().add(new StringField(3, "000"));
