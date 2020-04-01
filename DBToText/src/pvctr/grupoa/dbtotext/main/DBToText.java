@@ -19,6 +19,7 @@ public class DBToText {
 		FUNCOUTRAEMPTable funcoutraempTable = new FUNCOUTRAEMPTable(new Connector());
 		LOTACAOTable lotacaoTable = new LOTACAOTable(new Connector());
 		HORARIOTable horarioTable = new HORARIOTable(new Connector());
+		SINDTable sindTable = new SINDTable(new Connector());
 		
 		FileCreator.CreateFile("FuncPessoa", epgTable.tableToText());
 		FileCreator.CreateFile("Dependente", depTable.tableToText());
@@ -31,6 +32,7 @@ public class DBToText {
 		FileCreator.CreateFile("FuncOutraEmp", funcoutraempTable.tableToText());
 		FileCreator.CreateFile("Lotacao", lotacaoTable.tableToText());
 		FileCreator.CreateFile("Horario", horarioTable.tableToText());
+		FileCreator.CreateFile("Sindicato", sindTable.tableToText());
 		
 		//System.out.println(epgTable.tableToText());
 		System.out.println("Done!");
