@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class EPGTable extends GenericTable {
 
-	private final String tableName = "EPG";
+	private final String tableName = "EPG WHERE EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
 	
 	public EPGTable(Connector con) {
 		
@@ -36,7 +36,7 @@ public class EPGTable extends GenericTable {
 				dbl.getFields().add(new NumberField(21, 33)); //codtipolograd
 				dbl.getFields().add(new StringField(40, rs.getString("ENDLOGRADOURO")));
 				dbl.getFields().add(new NumberField(7, Utilities.toNumbersOnly(rs.getString("ENDNUMERO"))));
-				dbl.getFields().add(new StringField(20, rs.getString("ENDCOMPLEMENTO")));
+				dbl.getFields().add(new StringField(20, "")); //rs.getString("ENDCOMPLEMENTO")));
 				dbl.getFields().add(new StringField(30, rs.getString("BAIRRO")));
 				dbl.getFields().add(new StringField(2, rs.getString("MUN_UFD_SIGLA")));
 				dbl.getFields().add(new NumberField(8, Utilities.getCodmunicipio(rs.getString("MUN_UFD_SIGLA"), rs.getString("MUN_CODIGO")))); //codigomunic - verificar alteração deste campo

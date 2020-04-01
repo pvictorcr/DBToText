@@ -11,7 +11,7 @@ public class Connector {
 	private Connection con = null;
 	private Statement stm = null;
 	
-	private String url = "jdbc:firebirdsql:192.168.0.43/3050:C:/converter/AC_JMT.fdb";
+	private String url = "jdbc:firebirdsql:192.168.15.9/3050:C:/converter/ac_jmt.fdb";
 	private String user = "sysdba";
 	private String password = "masterkey";
 
@@ -29,7 +29,7 @@ public class Connector {
 			//System.out.println(rsmd.getColumnCount());
 
 		} catch (Exception e) {
-			System.out.println("N�o foi poss�vel conectar ao banco: " + e.getMessage());
+			System.out.println("Nao foi possivel conectar ao banco: " + e.getMessage());
 			System.out.println(e);
 		}
 
@@ -45,12 +45,12 @@ public class Connector {
 			con = DriverManager.getConnection(url, user , password);
 			stm = con.createStatement();
 			rs = stm.executeQuery("select first 100 * from " + tableName);
-			rs.next();
+			// se quiser pular a primeira linha rs.next();
 			
 			System.out.println();
 
 		} catch (Exception e) {
-			System.out.println("N�o foi poss�vel conectar ao banco: " + e.getMessage());
+			System.out.println("Nao foi possivel conectar ao banco: " + e.getMessage());
 			System.out.println(e);
 		}
 		

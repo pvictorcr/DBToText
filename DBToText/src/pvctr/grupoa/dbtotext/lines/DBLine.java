@@ -11,4 +11,10 @@ public class DBLine {
 	public ArrayList<DatabaseField> getFields(){
 		return this.fields;
 	}
+
+/**
+ * VERSAO QUESTOR TRIBUTARIO - 20.3.0.0
+ * CONVERSOR VERSAO V.01
+ */
 }
+

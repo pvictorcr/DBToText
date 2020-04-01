@@ -16,7 +16,7 @@ public class MunicipioUtilities {
 		case "MA" : return 21;
 		case "PI" : return 22;
 		case "CE" : return 23;
-		case "RN" : return 24;
+		case "RN" : return 89;
 		case "PB" : return 25;
 		case "PE" : return 26;
 		case "AL" : return 27;
@@ -36,7 +36,7 @@ public class MunicipioUtilities {
 
 		}
 
-		return 99;
+		return 24;
 	}
 	
 	static int getCodmunicipioRaes(String siglaestado, String codMunRaes) {
@@ -45,7 +45,7 @@ public class MunicipioUtilities {
 		String codRaes = ""+ codestado + codMunRaes;
 		
 		if(codRaes == null || codRaes.trim().equals(""))
-			return 0;
+			return 89;
 		
 		switch(codRaes.substring(0,2)) {
 		
@@ -105,7 +105,7 @@ public class MunicipioUtilities {
 			return getDF(codRaes);
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getRondonia(String codRais) {
@@ -135,7 +135,7 @@ public class MunicipioUtilities {
 		case "1100106" : return 21;
 		case "1101104" : return 22;
 		case "1100114" : return 23;
-		case "1100122" : return 24;
+		case "1100122" : return 89;
 		case "1100130" : return 25;
 		case "1101203" : return 26;
 		case "1101302" : return 27;
@@ -166,7 +166,7 @@ public class MunicipioUtilities {
 		case "1100304" : return 52;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getAcre(String codRais) {
@@ -197,7 +197,7 @@ public class MunicipioUtilities {
 		case "1200708" : return 22;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getAmazonas(String codRais) {
@@ -227,7 +227,7 @@ public class MunicipioUtilities {
 		case "1301308" : return 21;
 		case "1301407" : return 22;
 		case "1301506" : return 23;
-		case "1301605" : return 24;
+		case "1301605" : return 89;
 		case "1301654" : return 25;
 		case "1301704" : return 26;
 		case "1301803" : return 27;
@@ -268,7 +268,7 @@ public class MunicipioUtilities {
 		case "1304401" : return 62;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getRoraima(String codRais) {
@@ -292,7 +292,7 @@ public class MunicipioUtilities {
 		case "1400704" : return 15;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getPara(String codRais) {
@@ -322,7 +322,7 @@ public class MunicipioUtilities {
 		case "1501501" : return 21;
 		case "1501576" : return 22;
 		case "1501600" : return 23;
-		case "1501709" : return 24;
+		case "1501709" : return 89;
 		case "1501725" : return 25;
 		case "1501758" : return 26;
 		case "1501782" : return 27;
@@ -445,7 +445,7 @@ public class MunicipioUtilities {
 		case "1508407" : return 144;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getAmapa(String codRais) {
@@ -470,7 +470,7 @@ public class MunicipioUtilities {
 		case "1600808" : return 16;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getTocantins(String codRais) {
@@ -500,7 +500,7 @@ public class MunicipioUtilities {
 		case "1703057" : return 21;
 		case "1703073" : return 22;
 		case "1703107" : return 23;
-		case "1703206" : return 24;
+		case "1703206" : return 89;
 		case "1703305" : return 25;
 		case "1703602" : return 26;
 		case "1703701" : return 27;
@@ -618,7 +618,7 @@ public class MunicipioUtilities {
 		case "1722107" : return 139;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getMaranhao(String codRais) {
@@ -648,7 +648,7 @@ public class MunicipioUtilities {
 		case "2101251" : return 21;
 		case "2101301" : return 22;
 		case "2101350" : return 23;
-		case "2101400" : return 24;
+		case "2101400" : return 89;
 		case "2101509" : return 25;
 		case "2101608" : return 26;
 		case "2101707" : return 27;
@@ -844,7 +844,7 @@ public class MunicipioUtilities {
 		case "2114007" : return 217;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getPiaui(String codRais) {
@@ -874,7 +874,7 @@ public class MunicipioUtilities {
 		case "2201309" : return 21;
 		case "2201408" : return 22;
 		case "2201507" : return 23;
-		case "2201556" : return 24;
+		case "2201556" : return 89;
 		case "2201572" : return 25;
 		case "2201606" : return 26;
 		case "2201705" : return 27;
@@ -1077,7 +1077,7 @@ public class MunicipioUtilities {
 		case "2211704" : return 224;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getCeara(String codRais) {
@@ -1107,7 +1107,7 @@ public class MunicipioUtilities {
 		case "2301802" : return 21;
 		case "2301851" : return 22;
 		case "2301901" : return 23;
-		case "2301950" : return 24;
+		case "2301950" : return 89;
 		case "2302008" : return 25;
 		case "2302057" : return 26;
 		case "2302107" : return 27;
@@ -1270,7 +1270,7 @@ public class MunicipioUtilities {
 		case "2314102" : return 184;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getRGN(String codRais) {
@@ -1300,7 +1300,7 @@ public class MunicipioUtilities {
 		case "2401859" : return 21;
 		case "2401909" : return 22;
 		case "2402006" : return 23;
-		case "2402105" : return 24;
+		case "2402105" : return 89;
 		case "2402204" : return 25;
 		case "2402303" : return 26;
 		case "2402402" : return 27;
@@ -1446,7 +1446,7 @@ public class MunicipioUtilities {
 		case "2415008" : return 167;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getParaiba(String codRais) {
@@ -1476,7 +1476,7 @@ public class MunicipioUtilities {
 		case "2501534" : return 21;
 		case "2501609" : return 22;
 		case "2501575" : return 23;
-		case "2501708" : return 24;
+		case "2501708" : return 89;
 		case "2501807" : return 25;
 		case "2501906" : return 26;
 		case "2502003" : return 27;
@@ -1678,7 +1678,7 @@ public class MunicipioUtilities {
 		case "2517407" : return 223;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getPernambuco(String codRais) {
@@ -1708,7 +1708,7 @@ public class MunicipioUtilities {
 		case "2601904" : return 21;
 		case "2602001" : return 22;
 		case "2602100" : return 23;
-		case "2602209" : return 24;
+		case "2602209" : return 89;
 		case "2602308" : return 25;
 		case "2602407" : return 26;
 		case "2602506" : return 27;
@@ -1872,7 +1872,7 @@ public class MunicipioUtilities {
 		case "2616506" : return 185;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getAlagoas(String codRais) {
@@ -1902,7 +1902,7 @@ public class MunicipioUtilities {
 		case "2702009" : return 21;
 		case "2702108" : return 22;
 		case "2702207" : return 23;
-		case "2702306" : return 24;
+		case "2702306" : return 89;
 		case "2702355" : return 25;
 		case "2702405" : return 26;
 		case "2702504" : return 27;
@@ -1983,7 +1983,7 @@ public class MunicipioUtilities {
 		case "2709400" : return 102;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getSergipe(String codRais) {
@@ -2012,7 +2012,7 @@ public class MunicipioUtilities {
 		case "2802304" : return 21;
 		case "2802403" : return 22;
 		case "2802502" : return 23;
-		case "2802601" : return 24;
+		case "2802601" : return 89;
 		case "2802700" : return 25;
 		case "2802809" : return 26;
 		case "2802908" : return 27;
@@ -2066,7 +2066,7 @@ public class MunicipioUtilities {
 		case "2807600" : return 75;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getBahia(String codRais) {
@@ -2096,7 +2096,7 @@ public class MunicipioUtilities {
 		case "2901908" : return 21;
 		case "2901957" : return 22;
 		case "2902054" : return 23;
-		case "2902005" : return 24;
+		case "2902005" : return 89;
 		case "2902104" : return 25;
 		case "2902203" : return 26;
 		case "2902252" : return 27;
@@ -2492,7 +2492,7 @@ public class MunicipioUtilities {
 		case "2933604" : return 417;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getMinGer(String codRais) {
@@ -2522,7 +2522,7 @@ public class MunicipioUtilities {
 		case "3102001" : return 21;
 		case "3102050" : return 22;
 		case "3153509" : return 23;
-		case "3102100" : return 24;
+		case "3102100" : return 89;
 		case "3102209" : return 25;
 		case "3102308" : return 26;
 		case "3102407" : return 27;
@@ -3354,7 +3354,7 @@ public class MunicipioUtilities {
 		case "3172202" : return 853;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getEspSan(String codRais) {
@@ -3384,7 +3384,7 @@ public class MunicipioUtilities {
 		case "3201704" : return 21;
 		case "3201803" : return 22;
 		case "3201902" : return 23;
-		case "3202009" : return 24;
+		case "3202009" : return 89;
 		case "3202108" : return 25;
 		case "3202207" : return 26;
 		case "3202256" : return 27;
@@ -3441,7 +3441,7 @@ public class MunicipioUtilities {
 		case "3205309" : return 78;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getRJN(String codRais) {
@@ -3471,7 +3471,7 @@ public class MunicipioUtilities {
 		case "3300951" : return 21;
 		case "3301405" : return 22;
 		case "3301504" : return 23;
-		case "3301603" : return 24;
+		case "3301603" : return 89;
 		case "3301702" : return 25;
 		case "3301801" : return 26;
 		case "3301850" : return 27;
@@ -3542,7 +3542,7 @@ public class MunicipioUtilities {
 		case "3306305" : return 92;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getSaoPau(String codRais) {
@@ -3572,7 +3572,7 @@ public class MunicipioUtilities {
 		case "3501806" : return 21;
 		case "3501905" : return 22;
 		case "3502002" : return 23;
-		case "3502101" : return 24;
+		case "3502101" : return 89;
 		case "3502200" : return 25;
 		case "3502309" : return 26;
 		case "3502408" : return 27;
@@ -4196,7 +4196,7 @@ public class MunicipioUtilities {
 		case "3557154" : return 645;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getParana(String codRais) {
@@ -4226,7 +4226,7 @@ public class MunicipioUtilities {
 		case "4101655" : return 21;
 		case "4101705" : return 22;
 		case "4101804" : return 23;
-		case "4101853" : return 24;
+		case "4101853" : return 89;
 		case "4101903" : return 25;
 		case "4102000" : return 26;
 		case "4102109" : return 27;
@@ -4604,7 +4604,7 @@ public class MunicipioUtilities {
 		case "4128807" : return 399;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getSanCat(String codRais) {
@@ -4634,7 +4634,7 @@ public class MunicipioUtilities {
 		case "4201604" : return 21;
 		case "4201653" : return 22;
 		case "4201703" : return 23;
-		case "4201802" : return 24;
+		case "4201802" : return 89;
 		case "4201901" : return 25;
 		case "4201950" : return 26;
 		case "4202057" : return 27;
@@ -4908,7 +4908,7 @@ public class MunicipioUtilities {
 		case "4219853" : return 295;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getRGS(String codRais) {
@@ -4938,7 +4938,7 @@ public class MunicipioUtilities {
 		case "4301008" : return 21;
 		case "4301073" : return 22;
 		case "4301057" : return 23;
-		case "4301206" : return 24;
+		case "4301206" : return 89;
 		case "4301107" : return 25;
 		case "4301305" : return 26;
 		case "4301404" : return 27;
@@ -5414,7 +5414,7 @@ public class MunicipioUtilities {
 		case "4323804" : return 497;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getMGS(String codRais) {
@@ -5444,7 +5444,7 @@ public class MunicipioUtilities {
 		case "5002803" : return 21;
 		case "5002902" : return 22;
 		case "5002951" : return 23;
-		case "5003108" : return 24;
+		case "5003108" : return 89;
 		case "5003157" : return 25;
 		case "5003207" : return 26;
 		case "5003256" : return 27;
@@ -5502,7 +5502,7 @@ public class MunicipioUtilities {
 		case "5008404" : return 79;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getMTG(String codRais) {
@@ -5532,7 +5532,7 @@ public class MunicipioUtilities {
 		case "5102603" : return 21;
 		case "5102637" : return 22;
 		case "5102678" : return 23;
-		case "5102686" : return 24;
+		case "5102686" : return 89;
 		case "5102694" : return 25;
 		case "5102702" : return 26;
 		case "5102793" : return 27;
@@ -5652,7 +5652,7 @@ public class MunicipioUtilities {
 		case "5108600" : return 141;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getGoias(String codRais) {
@@ -5682,7 +5682,7 @@ public class MunicipioUtilities {
 		case "5201504" : return 21;
 		case "5201603" : return 22;
 		case "5201702" : return 23;
-		case "5201801" : return 24;
+		case "5201801" : return 89;
 		case "5202155" : return 25;
 		case "5202353" : return 26;
 		case "5202502" : return 27;
@@ -5907,7 +5907,7 @@ public class MunicipioUtilities {
 		case "5222302" : return 246;
 		}
 		
-		return 0;
+		return 89;
 	}
 	
 	private static int getDF(String codRais) {
@@ -5917,6 +5917,6 @@ public class MunicipioUtilities {
 			case "5300108" : return 1;
 		}
 		
-		return 0;
+		return 89;
 	}
 }

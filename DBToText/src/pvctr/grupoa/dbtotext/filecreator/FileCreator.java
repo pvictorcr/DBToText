@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 
 public class FileCreator {
 
-	private static String path = "/Users/joaopaulo/Desktop/";
+	private static String path = "/Users/joaopaulo/Desktop/Convertido/";
 
 	public static void CreateFile(String fileName, StringBuilder sb) {
 

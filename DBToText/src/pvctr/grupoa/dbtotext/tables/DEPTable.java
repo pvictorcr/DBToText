@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class DEPTable extends GenericTable {
 
-	private final String tableName = "DEP";
+	private final String tableName = "DEP INNER JOIN EPG ON EPG.EMP_CODIGO = DEP.EMP_CODIGO AND DEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
 	
 	public DEPTable(Connector con) {
 		
@@ -35,7 +35,7 @@ public class DEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(14, Utilities.treatCPF(rs.getString("CPF"))));
 				dbl.getFields().add(new NumberField(2, Utilities.treatSex(rs.getString("SEXO"))));
 				dbl.getFields().add(new StringField(2, "1"));
-				dbl.getFields().add(new StringField(3, "0"));
+				dbl.getFields().add(new StringField(3, "1"));
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(3, "014"));

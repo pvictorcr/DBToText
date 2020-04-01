@@ -1,5 +1,7 @@
 package pvctr.grupoa.dbtotext.utils;
 
+import pvctr.grupoa.dbtotext.fields.NumberField;
+
 public class Utilities {
 
 	public static String treatCPF(String cpfread) {
@@ -226,4 +228,27 @@ public static String treatUfsigla(String ufsiglaread) {
 }
 	return ufsiglaread;
 }
+public static String treatCtpsdv(String ctpsdvread) {
+
+	if(ctpsdvread == null) {
+
+	return "";
+}
+	return ctpsdvread;
+}
+public static String treatTipoInsc(String tipoinscread) {
+
+	switch (tipoinscread) {
+	
+	case "1":
+		return "02";
+	case "2":
+		return "03";
+	
+	}
+
+	return "02";
+}
+
+
 }

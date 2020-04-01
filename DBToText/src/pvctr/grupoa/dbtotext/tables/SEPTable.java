@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class SEPTable extends GenericTable {
 
-	private final String tableName = "EPG INNER JOIN SEP ON SEP.EMP_CODIGO = EPG.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO";
+	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.DTRESCISAO IS NULL AND EPG.EMP_CODIGO = '0008'";
 	
 	public SEPTable(Connector con) {
 		
@@ -99,7 +99,7 @@ public class SEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(2, "1"));
 				dbl.getFields().add(new StringField(1, "0"));
 				dbl.getFields().add(new StringField(5, "2"));
-				dbl.getFields().add(new StringField(999, ""));
+				dbl.getFields().add(new StringField(999, "IMPORTACAO"));
 				dbl.getFields().add(new StringField(5, "3"));
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(7, ""));
@@ -112,6 +112,7 @@ public class SEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(1, "0"));
 				dbl.getFields().add(new StringField(3, "0"));
+				dbl.getFields().add(new StringField(5, "0"));
 				
 				
 				

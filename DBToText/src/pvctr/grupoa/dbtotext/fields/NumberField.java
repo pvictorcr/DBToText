@@ -22,7 +22,6 @@ public class NumberField extends DatabaseField{
 	@Override
 	public String toText() {
 
-
 		return String.format("%0" + this.size + "d", field);
 
 	}
