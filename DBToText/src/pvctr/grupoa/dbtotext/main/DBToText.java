@@ -8,7 +8,7 @@ public class DBToText {
 
 	public static void main(String[] args) {
 
-		EPGTable epgTable = new EPGTable(new Connector());
+		/* EPGTable epgTable = new EPGTable(new Connector());
 		DEPTable depTable = new DEPTable(new Connector());
 		SEPTable sepTable = new SEPTable(new Connector());
 		CARTable carTable = new CARTable(new Connector());
@@ -20,8 +20,11 @@ public class DBToText {
 		LOTACAOTable lotacaoTable = new LOTACAOTable(new Connector());
 		HORARIOTable horarioTable = new HORARIOTable(new Connector());
 		SINDTable sindTable = new SINDTable(new Connector());
+		FUNCSINDICATOTable funcsindicatoTable = new FUNCSINDICATOTable(new Connector());
+		*/ORGANOGRAMATable organogramaTable = new ORGANOGRAMATable(new Connector());
+		FUNCLOCALTable funclocalTable = new FUNCLOCALTable(new Connector());
 		
-		FileCreator.CreateFile("FuncPessoa", epgTable.tableToText());
+		/*FileCreator.CreateFile("FuncPessoa", epgTable.tableToText());
 		FileCreator.CreateFile("Dependente", depTable.tableToText());
 		FileCreator.CreateFile("FuncContrato", sepTable.tableToText());
 		FileCreator.CreateFile("Cargo", carTable.tableToText());
@@ -33,6 +36,9 @@ public class DBToText {
 		FileCreator.CreateFile("Lotacao", lotacaoTable.tableToText());
 		FileCreator.CreateFile("Horario", horarioTable.tableToText());
 		FileCreator.CreateFile("Sindicato", sindTable.tableToText());
+		FileCreator.CreateFile("Funcsindicato", funcsindicatoTable.tableToText());
+		*/FileCreator.CreateFile("Organograma", organogramaTable.tableToText());
+		FileCreator.CreateFile("Funclocal", funclocalTable.tableToText());
 		
 		//System.out.println(epgTable.tableToText());
 		System.out.println("Done!");

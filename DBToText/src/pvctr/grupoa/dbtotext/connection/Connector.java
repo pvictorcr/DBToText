@@ -11,7 +11,7 @@ public class Connector {
 	private Connection con = null;
 	private Statement stm = null;
 	
-	private String url = "jdbc:firebirdsql:192.168.15.9/3050:C:/converter/ac_jmt.fdb";
+	private String url = "jdbc:firebirdsql:192.168.43.46/3050:C:/converter/ac_jmt.fdb";
 	private String user = "sysdba";
 	private String password = "masterkey";
 
@@ -44,7 +44,7 @@ public class Connector {
 			Class.forName("org.firebirdsql.jdbc.FBDriver");
 			con = DriverManager.getConnection(url, user , password);
 			stm = con.createStatement();
-			rs = stm.executeQuery("select first 100 * from " + tableName);
+			rs = stm.executeQuery("select * from " + tableName);
 			// se quiser pular a primeira linha rs.next();
 			
 			System.out.println();
