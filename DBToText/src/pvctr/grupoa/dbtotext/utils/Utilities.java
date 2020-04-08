@@ -249,6 +249,4 @@ public static String treatTipoInsc(String tipoinscread) {
 
 	return "02";
 }
-
-
 }

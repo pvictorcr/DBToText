@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class CARTable extends GenericTable {
 
-	private final String tableName = "CAR";
+	private final String tableName = "CAR where EMP_CODIGO = '0008'";
 	
 	public CARTable(Connector con) {
 		
