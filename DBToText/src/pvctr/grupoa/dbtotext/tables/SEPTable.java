@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class SEPTable extends GenericTable {
 
-	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.DTRESCISAO IS NULL AND EPG.EMP_CODIGO = '0008'";
+	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.DTRESCISAO >= '01/01/2018' AND EPG.EMP_CODIGO = '0008'";
 	
 	public SEPTable(Connector con) {
 		
@@ -95,7 +95,12 @@ public class SEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(10, ""));
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(1, ""));
-				dbl.getFields().add(new DateField(10, rs.getTimestamp("DTRESCISAO")));
+				 String dtrescisao = rs.getString("DTRESCISAO");
+				if (dtrescisao == null) {
+					dbl.getFields().add(new StringField(10, ""));
+				}
+				else {
+					dbl.getFields().add(new DateField(10, rs.getTimestamp("DTRESCISAO")));}
 				dbl.getFields().add(new StringField(2, "1"));
 				dbl.getFields().add(new StringField(1, "0"));
 				dbl.getFields().add(new StringField(5, "2"));
@@ -112,7 +117,6 @@ public class SEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(1, "0"));
 				dbl.getFields().add(new StringField(3, "0"));
-				dbl.getFields().add(new StringField(5, "0"));
 				
 				
 				

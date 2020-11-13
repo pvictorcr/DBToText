@@ -14,7 +14,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class FUNCLOCALTable extends GenericTable {
 
-	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.DTRESCISAO IS NULL AND EPG.EMP_CODIGO = '0008'";
+	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.EMP_CODIGO = '0008'";
 	
 	public FUNCLOCALTable(Connector con) {
 		
@@ -40,7 +40,7 @@ public class FUNCLOCALTable extends GenericTable {
 				dbl.getFields().add(new DatetimeField(19, rs.getTimestamp("ADMISSAODATA")));
 				dbl.getFields().add(new NumberField(2, "02")); 
 				dbl.getFields().add(new NumberField(2, "20"));
-				dbl.getFields().add(new NumberField(2, "2"));
+				dbl.getFields().add(new NumberField(2, "1"));
 				dbl.getFields().add(new StringField(2, ""));
 				dbl.getFields().add(new StringField(2, ""));
 				dbl.getFields().add(new StringField(2, ""));

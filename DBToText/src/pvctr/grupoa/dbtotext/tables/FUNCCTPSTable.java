@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class FUNCCTPSTable extends GenericTable {
 
-	private final String tableName = "EPG WHERE EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
+	private final String tableName = "EPG WHERE EMP_CODIGO = '0008'";
 	
 	public FUNCCTPSTable(Connector con) {
 		

@@ -206,9 +206,9 @@ public static String treatParente(String parenteread) {
 	return "14";
 }
 
-public static String treatIncapaztrabalhar(String incapaztrabalharread) {
+public static String treatSimounao(String simounaoread) {
 
-	switch (incapaztrabalharread) {
+	switch (simounaoread) {
 	case "N":
 		return "0";
 	case "S":
@@ -249,4 +249,107 @@ public static String treatTipoInsc(String tipoinscread) {
 
 	return "02";
 }
+public static String treatTiposdeAfastamento(String tiposdeafastamentoread) {
+
+	switch (tiposdeafastamentoread) {
+	
+	case "01":
+		return "02";
+	case "02":
+		return "13";
+	case "03":
+		return "03";
+	case "04":
+		return "04";
+	case "05":
+		return "05";	
+	case "06":
+		return "08";
+	case "07":
+		return "35";
+	case "08":
+		return "06";
+	case "09":
+		return "25";
+	case "10":
+		return "26";
+	case "11":
+		return "27";
+	case "12":
+		return "24";
+	case "13":
+		return "23";
+	case "14":
+		return "14";
+	case "15":
+		return "15";
+	case "16":
+		return "08";
+	case "17":
+		return "22";
+	case "18":
+		return "22";
+	case "19":
+		return "22";
+	case "20":
+		return "22";
+	case "21":
+		return "22";
+	case "22":
+		return "24";
+	case "23":
+		return "22";
+	case "24":
+		return "22";
+	case "25":
+		return "28";
+	case "26":
+		return "04";
+	case "27":
+		return "31";
+	
+	}
+
+	return "03";
+}
+
+public static String treatTipoaviso(String tipoavisoread) {
+
+	switch (tipoavisoread) {
+	case "I":
+		return "1";
+	case "T":
+		return "0";
+	}
+
+	return "0";
+}
+
+public static String treatTipoaviso2(String tipoaviso2read) {
+
+	switch (tipoaviso2read) {
+	case "T":
+		return "1";
+	case "I":
+		return "2";
+	}
+
+	return "3";
+}
+
+
+public static String treatTlicodigo(String tlicodigoread) {
+switch (tlicodigoread) {
+
+case "12":
+	return "1";
+case "13":
+	return "1";
+
+}
+
+return "0";
+}
+
+
 }

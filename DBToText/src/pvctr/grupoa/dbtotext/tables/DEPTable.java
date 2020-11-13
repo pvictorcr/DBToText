@@ -12,12 +12,13 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class DEPTable extends GenericTable {
 
-	private final String tableName = "DEP INNER JOIN EPG ON EPG.EMP_CODIGO = DEP.EMP_CODIGO AND DEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
+	private final String tableName = "DEP INNER JOIN EPG ON EPG.EMP_CODIGO = DEP.EMP_CODIGO AND DEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008'";
 	
 	public DEPTable(Connector con) {
 		
 		ResultSet rs = con.getTable(tableName);
 		int codFuncPessoa = 1;
+		int i =0;
 		
 		try {
 			while(rs.next()) {
@@ -40,7 +41,7 @@ public class DEPTable extends GenericTable {
 				dbl.getFields().add(new StringField(5, ""));
 				dbl.getFields().add(new StringField(3, "014"));
 				dbl.getFields().add(new StringField(4, "021"));
-				dbl.getFields().add(new StringField(1, Utilities.treatIncapaztrabalhar(rs.getString("INCAPAZTRABALHO"))));
+				dbl.getFields().add(new StringField(1, Utilities.treatSimounao(rs.getString("INCAPAZTRABALHO"))));
 				dbl.getFields().add(new StringField(5, "1"));
 				dbl.getFields().add(new StringField(2, "1")); //CONTROLE DE VACINA
 				dbl.getFields().add(new StringField(10, ""));

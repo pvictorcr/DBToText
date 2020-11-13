@@ -1,7 +1,9 @@
 package pvctr.grupoa.dbtotext.tables;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 
 import pvctr.grupoa.dbtotext.connection.Connector;
 import pvctr.grupoa.dbtotext.fields.DateField;
@@ -9,10 +11,16 @@ import pvctr.grupoa.dbtotext.fields.NumberField;
 import pvctr.grupoa.dbtotext.fields.StringField;
 import pvctr.grupoa.dbtotext.lines.DBLine;
 import pvctr.grupoa.dbtotext.utils.Utilities;
+//import pvctr.grupoa.dbtotext.connection.Connector;
+//import pvctr.grupoa.dbtotext.fields.DateField;
+//import pvctr.grupoa.dbtotext.fields.NumberField;
+//import pvctr.grupoa.dbtotext.fields.StringField;
+//import pvctr.grupoa.dbtotext.lines.DBLine;
+//import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class EPGTable extends GenericTable {
 
-	private final String tableName = "EPG WHERE EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
+	private final String tableName = "EPG INNER JOIN SEP ON SEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008' and EPG.DTRESCISAO >= '01/01/2018'";
 	
 	public EPGTable(Connector con) {
 		

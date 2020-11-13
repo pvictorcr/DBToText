@@ -12,7 +12,7 @@ import pvctr.grupoa.dbtotext.utils.Utilities;
 
 public class FUNCCARGOTable extends GenericTable {
 
-	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.DTRESCISAO IS NULL AND EPG.EMP_CODIGO = '0008'";//"SEP INNER JOIN EPG ON SEP.EMP_CODIGO = EPG.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
+	private final String tableName = "SEP INNER JOIN EPG ON EPG.EMP_CODIGO = SEP.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO LEFT JOIN SEP B ON SEP.EPG_CODIGO = B.EPG_CODIGO AND SEP.EMP_CODIGO = B.EMP_CODIGO AND SEP.DATA < B.DATA WHERE B.DATA IS NULL AND EPG.EMP_CODIGO = '0008'";//"SEP INNER JOIN EPG ON SEP.EMP_CODIGO = EPG.EMP_CODIGO AND SEP.EPG_CODIGO = EPG.CODIGO WHERE EPG.EMP_CODIGO = '0008' AND DTRESCISAO IS NULL";
 	
 	public FUNCCARGOTable(Connector con) {
 		
@@ -32,7 +32,7 @@ public class FUNCCARGOTable extends GenericTable {
 				dbl.getFields().add(new NumberField(7, rs.getInt("CAR_CODIGO")));
 				dbl.getFields().add(new StringField(4, "0001"));
 				dbl.getFields().add(new StringField(3, "000"));
-				dbl.getFields().add(new StringField(7, "0000000"));
+				dbl.getFields().add(new StringField(7, rs.getString("FUN_CODIGO")));
 				dbl.getFields().add(new StringField(3, "000"));
 					
 				//ALTERACAO E DAQUI PRA CIMA
