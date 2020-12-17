@@ -32,7 +32,7 @@ public class DEPTable extends GenericTable {
 				dbl.getFields().add(new NumberField(5, rs.getInt("SEQ")));
 				dbl.getFields().add(new StringField(70, rs.getString("NOME")));
 				dbl.getFields().add(new DateField(10, rs.getTimestamp("NASCDATA")));
-				dbl.getFields().add(new StringField(2, "01"));   //dbl.getFields().add(new StringField(2, Utilities.treatParente(rs.getString("TB_TIP_DEP_CODIGO"))));
+				dbl.getFields().add(new StringField(2, Utilities.treatParente(rs.getString("TB_TIP_DEP_CODIGO"))));
 				dbl.getFields().add(new StringField(14, Utilities.treatCPF(rs.getString("CPF"))));
 				dbl.getFields().add(new NumberField(2, Utilities.treatSex(rs.getString("SEXO"))));
 				dbl.getFields().add(new StringField(2, "1"));

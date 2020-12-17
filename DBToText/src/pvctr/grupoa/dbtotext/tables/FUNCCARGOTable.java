@@ -31,7 +31,7 @@ public class FUNCCARGOTable extends GenericTable {
 				dbl.getFields().add(new DateField(10, rs.getTimestamp("ADMISSAODATA")));
 				dbl.getFields().add(new NumberField(7, rs.getInt("CAR_CODIGO")));
 				dbl.getFields().add(new StringField(4, "0001"));
-				dbl.getFields().add(new StringField(3, "000"));
+				dbl.getFields().add(new StringField(3, "9"));
 				dbl.getFields().add(new StringField(7, rs.getString("FUN_CODIGO")));
 				dbl.getFields().add(new StringField(3, "000"));
 					

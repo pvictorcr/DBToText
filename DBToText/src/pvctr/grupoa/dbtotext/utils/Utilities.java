@@ -17,7 +17,7 @@ public class Utilities {
 			return cpf;
 		}
 
-		return "00000000000000";
+		return "11111111111111";
 	}
 
 	public static String treatCEP(String cepread) {
@@ -325,6 +325,34 @@ public static String treatTipoaviso(String tipoavisoread) {
 	return "0";
 }
 
+
+public static String getCnpjComVerificador(String cnpjSemVerificador) {
+
+	cnpjSemVerificador = cnpjSemVerificador.replaceAll("\\D", "");
+	
+	int[] pesos1 = {5,4,3,2,9,8,7,6,5,4,3,2};
+	int[] pesos2 = {6,5,4,3,2,9,8,7,6,5,4,3,2};
+	
+	int acumulado = 0;
+	for(int i = 0; i < cnpjSemVerificador.length(); i++) {
+		acumulado += (Integer.parseInt(cnpjSemVerificador.charAt(i)+"")) * pesos1[i];
+	}
+
+	int digito = acumulado % 11 < 2 ? 0 : 11 - (acumulado%11);
+	
+	cnpjSemVerificador += digito;
+	
+	acumulado = 0;
+	for(int i = 0; i < cnpjSemVerificador.length(); i++) {
+		acumulado += (Integer.parseInt(cnpjSemVerificador.charAt(i)+"")) * pesos2[i];
+	}
+
+	digito = acumulado % 11 < 2 ? 0 : 11 - (acumulado%11);
+	
+	return cnpjSemVerificador + digito;
+}
+
+
 public static String treatTipoaviso2(String tipoaviso2read) {
 
 	switch (tipoaviso2read) {
@@ -336,6 +364,8 @@ public static String treatTipoaviso2(String tipoaviso2read) {
 
 	return "3";
 }
+
+
 
 
 public static String treatTlicodigo(String tlicodigoread) {
@@ -351,5 +381,46 @@ case "13":
 return "0";
 }
 
+public static String treatInsalubridade(String insalubridaderead) {
+switch (insalubridaderead) {
 
+case "016":
+	return insalubridaderead;
+case "100":
+	return insalubridaderead;
+case "212":
+	return insalubridaderead;
+case "905":
+	return insalubridaderead;	
+
+}
+
+return "0";
+}
+
+
+
+public static String treatPericulosidade(String periculosidaderead) {
+switch (periculosidaderead) {
+
+case "013":
+	return periculosidaderead;
+case "930":
+	return periculosidaderead;
+}
+
+return "0";
+}
+
+public static String treatInfprovdesc(String infprovdescread) {
+
+	switch (infprovdescread) {
+	case "0":
+		return "I";
+	case "1":
+		return "P";
+	case "2":
+		return "D";
+	}   return infprovdescread;
+} 
 }

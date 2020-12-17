@@ -10,11 +10,11 @@ import pvctr.grupoa.dbtotext.fields.StringField;
 import pvctr.grupoa.dbtotext.lines.DBLine;
 import pvctr.grupoa.dbtotext.utils.Utilities;
 
-public class TOMTable extends GenericTable {
+public class OUTRAEMPRESATable extends GenericTable {
 
 	private final String tableName = "TOM";
 	
-	public TOMTable(Connector con) {
+	public OUTRAEMPRESATable(Connector con) {
 		
 		ResultSet rs = con.getTable(tableName);
 		int codFuncPessoa = 1;

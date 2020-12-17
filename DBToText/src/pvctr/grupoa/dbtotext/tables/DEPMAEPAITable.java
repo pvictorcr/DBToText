@@ -34,7 +34,7 @@ public class DEPMAEPAITable extends GenericTable {
 				dbl.getFields().add(new NumberField(5, empCodigo));
 				dbl.getFields().add(new NumberField(7, epgCodigo));
 				dbl.getFields().add(new StringField(5, "20"));
-				if(maenome == "") {
+				if(maenome == null || maenome == "") {
 					dbl.getFields().add(new StringField(70, "NÃO DECLARADO"));
 				}else {	
 					dbl.getFields().add(new StringField(70, rs.getString("MAENOME")));
@@ -84,7 +84,7 @@ public class DEPMAEPAITable extends GenericTable {
 				dbl.getFields().add(new NumberField(5, empCodigo));
 				dbl.getFields().add(new NumberField(7, epgCodigo));
 				dbl.getFields().add(new StringField(5, "10"));
-				if(painome == "") {
+				if(painome == null || painome == "") {
 					dbl.getFields().add(new StringField(70, "NÃO DECLARADO"));
 				}else {	
 					dbl.getFields().add(new StringField(70, rs.getString("PAINOME")));

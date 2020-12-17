@@ -1,4 +1,4 @@
-package pvctr.grupoa.dbtotext.tables;
+package pvctr.grupoa.dbtotext.tables; //tabela Tipo Plano de Saúde
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,11 +10,11 @@ import pvctr.grupoa.dbtotext.fields.StringField;
 import pvctr.grupoa.dbtotext.lines.DBLine;
 import pvctr.grupoa.dbtotext.utils.Utilities;
 
-public class EVENTORELACTable extends GenericTable {
+public class TIPOPLANOSAUDETable extends GenericTable {
 
-	private final String tableName = "EVE where emp_codigo ='0008' order by codigo";
+	private final String tableName = "PSO";
 	
-	public EVENTORELACTable(Connector con) {
+	public TIPOPLANOSAUDETable(Connector con) {
 		
 		ResultSet rs = con.getTable(tableName);
 		int codFuncPessoa = 1;
@@ -23,16 +23,15 @@ public class EVENTORELACTable extends GenericTable {
 			while(rs.next()) {
 				
 				DBLine dbl = new DBLine();
-				//aLTERACAO É DAQUI PRA BAIXO
-				String Infprovdesc = rs.getString("INFPROVDESC");
+				//aLTERACAO É DAQUI PRA BAIXO ***
 				
 				dbl.getFields().add(new StringField(1, " ")); //NAO MEXER
-				dbl.getFields().add(new NumberField(11, rs.getInt("CODIGO")));
-				dbl.getFields().add(new StringField(100, rs.getString("NOME")+" - " + Utilities.treatInfprovdesc(rs.getString("INFPROVDESC"))));
-				dbl.getFields().add(new StringField(5, ""));
+				dbl.getFields().add(new NumberField(5, rs.getInt("CODIGO")));
+				dbl.getFields().add(new StringField(70, rs.getString("NOME")));
+				dbl.getFields().add(new StringField(4000, ""));
 				
 					
-				//ALTERACAO E DAQUI PRA CIMA
+				//ALTERACAO E DAQUI PRA CIMA ***
 				this.lines.add(dbl);
 			}
 		} catch (SQLException e) {
